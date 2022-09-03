@@ -1,6 +1,13 @@
 :root {
   --white-place: #fff;
-  --border-color: #8f8f8f;
+  --bottom-border: #435c50;
+  --border-spacing: #d9d9d9;
+  --dark-black-space: #2b2b2b;
+  --margin-two-side: 0 130px 100px;
+  --general-font-size-1: 1.9em;
+  --product-font-size-1: 1.2em;
+  --general-font-small-1: 0.85em;
+  --general-gap: 45px;
 }
 
 body {
@@ -8,6 +15,7 @@ body {
   background: url(../images/tamara-bellis-HY1fq4ZtLTE-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -36,7 +44,7 @@ h1 {
   width: 100%;
   z-index: 999;
   top: 7px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-spacing);
 }
 
 .menu-links {
@@ -52,8 +60,21 @@ h1 {
   padding: 0 10px;
 }
 
+.menu-links > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-links > li > a:hover {
+  color: #1f1f1fb3;
+}
+
+.contain-bottom-banner > a,
+.explore-products > a {
+  text-decoration: none;
+}
+
 main {
-  background-color: var(--white-place);
   background-size: cover;
   position: relative;
   z-index: 99;
@@ -62,18 +83,21 @@ main {
 }
 
 .right-banner {
-  background: url(../images/andrew-neel-st-_pIZEvKM-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: end;
   width: 50%;
 }
 
 .bottom-banner {
-  background-color: #000;
+  background-color: var(--dark-black-space);
   color: var(--white-place);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bottom-banner:hover {
+  background-color: #000;
 }
 
 .bottom-banner img {
@@ -83,29 +107,49 @@ main {
   padding: 30px;
 }
 
-.banner {
+.margin-side {
+  margin: var(--margin-two-side);
+}
+
+.bag-banner-img {
+  background: url(../images/andrew-neel-st-_pIZEvKM-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 999;
+  width: 50%;
+  height: 900px;
+}
+
+.wrap-banner {
+  border-bottom: 1px solid var(--border-spacing);
   display: flex;
   height: 900px;
 }
 
 .left-banner {
-    width: 50%;
-    border-right: 1px solid var(--border-color);
-    padding: 0 0 0 150px;
+  width: 50%;
+  border-right: 1px solid var(--border-color);
+  background-color: #fff;
 }
 
 .sub-top-banner {
   text-align: justify;
-  padding: 100px 130px;
+  padding: 100px 70px 93px 70px;
+}
+
+.sub-top-banner > p {
+  font-size: 1.1em;
 }
 
 .right-cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding: 0 20px;
-    text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 20px;
+  text-align: justify;
 }
 
 .right-cover h5 {
@@ -114,17 +158,275 @@ main {
 }
 
 .right-cover p {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .discover-product {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 25px;
-    background-color: #2c5440;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.2em;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: #344e41;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.discover-product:hover {
+  background-color: #205b3e;
+}
+
+.discover-product:hover .test {
+  margin-right: -7px;
+  background-color: red;
+}
+
+.contain-bottom-banner {
+  margin-top: 126px;
+}
+
+.part-page-1,
+.part-page-2 {
+  background-color: var(--white-place);
+}
+
+.part-page-1 {
+  margin-bottom: 300px;
+}
+
+.intro-product {
+  width: 100%;
+  background-color: var(--white-place);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  position: relative;
+  z-index: 9999;
+}
+
+.intro-product h4 {
+  font-weight: 600;
+}
+
+.categories-clothes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* padding-bottom: 100px; */
+  gap: var(--general-gap);
+}
+
+.accesories {
+  background: url(../images/tamara-bellis-U2ymajzuqFk-unsplash.jpg);
+}
+
+.men {
+  background: url(../images/hunters-race-hNoSCxPWYII-unsplash.jpg);
+}
+
+.women {
+  background: url(../images/joshua-rawson-harris-haUQC3eto2s-unsplash.jpg);
+}
+
+.youth {
+  background: url(../images/clarke-sanders-HOQpBGL95Z8-unsplash.jpg);
+}
+
+.cate-box {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 50px 50px;
+  display: flex;
+  align-items: end;
+  height: 600px;
+}
+
+.wrap-explore {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.explore-box {
+  background: white;
+  padding: 20px 50px;
+  width: 100%;
+}
+
+.explore-box h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: var(--general-font-size-1);
+}
+
+.explore-box p {
+  font-size: 0.85em;
+  margin-right: 30px;
+}
+
+.shop {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.shop > .shop-title {
+  font-size: var(--general-font-small-1);
+}
+
+.shop > .latest-pieces {
+  font-size: var(--general-font-size-1);
+}
+
+.explore-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: var(--general-gap);
+}
+
+.product-detail-box .name {
+  font-size: var(--product-font-size-1);
+  padding: 13px 0;
+}
+.product-detail-box .price {
+  font-size: var(--general-font-size-1);
+}
+
+.product-1 {
+  background: url(../images/products/alex-haigh-fEt6Wd4t4j0-unsplash.jpg);
+}
+
+.product-2 {
+  background: url(../images/products/anomaly-WWesmHEgXDs-unsplash.jpg);
+}
+
+.product-3 {
+  background: url(../images/products/faith-yarn-hgtWvsq5e2c-unsplash.jpg);
+}
+
+.product-4 {
+  background: url(../images/products/pavel-pjatakov-dFq9voPf0CA-unsplash.jpg);
+}
+
+.product-image {
+  background-position: left;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 0 15px;
+}
+
+.view-product-btn:hover {
+  /* animation-name: viewProductBtn;
+  animation-duration: 4s; */
+}
+
+.product-image > div {
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.explore-products > a {
+  color: #000;
+  height: 100%;
+  max-height: 600px;
+}
+/*
+@keyframes viewProductBtn {
+  0% {
+    position: relative;
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    position: static;
+    bottom: 0px;
+    opacity: 1;
+  }
+} */
+
+.view-all-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.view-all-button > div {
+  background-color: var(--dark-black-space);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+}
+
+.view-all-button > div:hover {
+  background-color: #000;
+}
+
+.view-all-button p {
+  padding-right: 20px;
+}
+
+/*--------- Part 2 of page ----------*/
+.news-section {
+  display: flex;
+  padding: 100px 0;
+  max-width: 100%;
+}
+
+.news-section img {
+  object-fit: cover;
+  height: auto;
+  max-height: 500px;
+  max-width: 70%;
+}
+
+.news-section > div {
+  box-shadow: 0px 0px 5px;
+  position: absolute;
+  background-color: #fff;
+  right: 130px;
+  bottom: 500px;
+  z-index: 999;
+  max-width: 505px;
+}
+
+.meet-bay-area {
+  box-shadow: 5px 5px 40px;
+  padding: 50px 70px;
+  position: absolute;
+  max-height: 100%;
+  max-width: 50%;
+  width: 600px;
+  background-color: #fff;
+  right: 130px;
+  bottom: 190px;
+}
+
+.meet-bay-area > h3 {
+  font-weight: 500;
+  font-size: 2.2em;
+  margin: 0 0 10px;
+}
+
+.meet-bay-area > div {
+  font-size: 1.2em;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.article > .title {
+  font-size: var(--general-font-small-1);
 }
